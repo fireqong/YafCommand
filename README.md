@@ -1,0 +1,2 @@
+# YafCommand
+yaf generator
