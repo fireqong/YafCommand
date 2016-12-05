@@ -1,0 +1,21 @@
+{
+	"name": "church/YafCommand",
+    "type": "library",
+    "description": "yaf generator",
+    "keywords": ["yaf generator", "yaf生成组件命令"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "qiqing",
+            "email": "church_qi@aliyun.com",
+            "homepage": "https://github.com/fireqong"
+        }
+    ],
+	"autoload": {
+		"psr-4": {
+			"church\\": "src/",
+			"symfony/console": "^3.2"
+		}
+	},
+	"minimum-stability": "dev"
+}
