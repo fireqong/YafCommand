@@ -29,7 +29,7 @@ class GenerateController extends Command
 		$controller_name = $input->getArgument('controller_name');
 		
 		if (defined('APPLICATION_PATH')) {
-			$data = sprintf(fread(__DIR__ . 'Templates/Controller.php', $controller_name);
+			$data = sprintf(fread(__DIR__ . 'Templates/Controller.php'), $controller_name);
 			$this->generate(APPLICATION_PATH . 'controllers' . DIRECTORY_SEPARATOR . $controller_name . '.php', $data);
 			$output->writeln('controller ' . $controller_name . ' generate successfully.';
 		} else {
