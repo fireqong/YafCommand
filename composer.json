@@ -2,7 +2,7 @@
 	"name": "church/YafCommand",
     "type": "library",
     "description": "yaf generator",
-    "keywords": ["yaf generator", "yafÉú³É×é¼şÃüÁî"],
+    "keywords": ["yaf generator", "yafç»„ä»¶ç”Ÿæˆå™¨"],
     "license": "MIT",
     "authors": [
         {
@@ -17,7 +17,7 @@
 		}
 	},
 	"require": {
-		"symfony/console": "^3.2"
+	
 	},
 	"minimum-stability": "dev"
 }
