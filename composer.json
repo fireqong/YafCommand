@@ -16,8 +16,8 @@
 			"church\\": "src/"
 		}
 	},
+	"minimum-stability": "dev",
 	"require": {
-	
-	},
-	"minimum-stability": "dev"
+		"symfony/console": "^3.2"
+	}
 }
