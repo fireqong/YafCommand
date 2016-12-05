@@ -15,7 +15,7 @@ class GenerateController extends Command
 	{
 		$this
 			->setName('make:controller')
-			->addArgument('controller_name', InputArgument::REQUIED, 'The name of controller.')
+			->addArgument('controller_name', InputArgument::REQUIRED, 'The name of controller.')
 			->setDescription('Create new controller.')
 			->setHelp('This command allows you create a controller.');
 	}
@@ -28,10 +28,16 @@ class GenerateController extends Command
 		
 		$controller_name = $input->getArgument('controller_name');
 		
-		if (defined('APPLICATION_PATH')) {
-			$data = sprintf(fread(__DIR__ . 'Templates/Controller.php'), $controller_name);
-			$this->generate(APPLICATION_PATH . 'controllers' . DIRECTORY_SEPARATOR . $controller_name . '.php', $data);
-			$output->writeln('controller ' . $controller_name . ' generate successfully.';
+		if (defined('APP_PATH')) {
+			$template = require(__DIR__ . DIRECTORY_SEPARATOR . 'Templates' . DIRECTORY_SEPARATOR . 'Controller.php');
+			$data = sprintf($template, $controller_name);
+			$this->generate(
+					APP_PATH . DIRECTORY_SEPARATOR . 'controllers' . DIRECTORY_SEPARATOR . $controller_name . '.php', 
+					$data,
+					$input,
+					$output
+					);
+			$output->writeln('controller ' . $controller_name . ' generate successfully.');
 		} else {
 			$output->writeln('generating controller failure');
 		}

@@ -1,6 +1,6 @@
 <?php 
 
-return <<< TEMPLATE
+$str =  <<< TEMPLATE
 <?php 
 
 use Yaf\Request_Abstract;
@@ -41,3 +41,5 @@ class %s extends Plugin_Abstract
 }
 
 TEMPLATE;
+
+return $str;

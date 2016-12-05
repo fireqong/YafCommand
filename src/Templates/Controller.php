@@ -1,6 +1,6 @@
 <?php 
 
-return <<< TEMPLATE
+$str =  <<< TEMPLATE
 <?php 
 
 use Yaf\Controller_Abstract;
@@ -14,3 +14,5 @@ class %s extends Controller_Abstract
 }
 
 TEMPLATE;
+
+return $str;
