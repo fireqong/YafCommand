@@ -5,7 +5,7 @@ $str =  <<< TEMPLATE
 
 use Yaf\Controller_Abstract;
 
-class %s extends Controller_Abstract
+class %sController extends Controller_Abstract
 {
 	public function indexAction()
 	{
