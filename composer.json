@@ -1,5 +1,5 @@
 {
-	"name": "church/YafCommand",
+	"name": "church/yaf-command",
     "type": "library",
     "description": "yaf generator",
     "keywords": ["yaf generator", "yaf组件生成器"],
